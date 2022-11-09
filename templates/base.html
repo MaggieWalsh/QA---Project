@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180"
         href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -67,8 +68,7 @@
         {% block content %}
         {% endblock %}
     </div>
-
-
+    <!-- Footer -->
     <footer class="border-top">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -99,7 +99,8 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="small text-center text-muted fst-italic">Copyright &copy; Light's Out! 2022</div>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Light's Out! <span
+                            id="year"></span></div>
                 </div>
             </div>
         </div>
@@ -110,6 +111,8 @@
     </script>
     <!-- Core theme JS-->
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <!-- Custom JS script -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>
