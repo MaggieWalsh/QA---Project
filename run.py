@@ -8,13 +8,23 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
+@app.route("/movies")
+def movies():
+    return render_template("movies.html")
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+@app.route("/shows")
+def shows():
+    return render_template("shows.html")
+
+
+@app.route("/celebs")
+def celebs():
+    return render_template("celebs.html")
+
+
+@app.route("/user")
+def user():
+    return render_template("user.html")
 
 if __name__ == "__main__":
     app.run(

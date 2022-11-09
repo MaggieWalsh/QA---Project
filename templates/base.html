@@ -12,9 +12,16 @@
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('movies') }}">Movies</a></li>
+            <li><a href="{{ url_for('shows') }}">Shows</a></li>
+            <li><a href="{{ url_for('celebs') }}">Celebs</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="{{ url_for('user') }}">User</a></li>
         </ul>
     </nav>
+
+    {% block content %}
+    {% endblock %}
 </body>
 
 </html>
