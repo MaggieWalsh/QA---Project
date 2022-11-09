@@ -22,9 +22,10 @@ def celebs():
     return render_template("celebs.html")
 
 
-@app.route("/user")
-def user():
-    return render_template("user.html")
+@app.route("/account")
+def account():
+    return render_template("account.html")
+    
 
 if __name__ == "__main__":
     app.run(
