@@ -1,68 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-md-10 col-lg-8 col-xl-7">
-        <!-- Post preview-->
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-            </a>
-            <p class="post-meta">
-                Posted by
-                <a href="#!">Start Bootstrap</a>
-                on September 24, 2022
-            </p>
+<div class="card-deck">
+    <div class="card">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">Django Unchained</h4>
+            <p class="card-text"><strong>Rating 4.9/5 </strong><i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>Release Date : </em></p>
         </div>
-        <!-- Divider-->
-        <hr class="my-4" />
-        <!-- Post preview-->
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend
-                    to waste any of mine.</h2>
-            </a>
-            <p class="post-meta">
-                Posted by
-                <a href="#!">Start Bootstrap</a>
-                on September 18, 2022
-            </p>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">Casino Royale</h4>
+            <p class="card-text"><strong>Rating 4.4/5 </strong><i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>Release Date : </em></p>
         </div>
-        <!-- Divider-->
-        <hr class="my-4" />
-        <!-- Post preview-->
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">Science has not yet mastered prophecy</h2>
-                <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the
-                    next ten.</h3>
-            </a>
-            <p class="post-meta">
-                Posted by
-                <a href="#!">Start Bootstrap</a>
-                on August 24, 2022
-            </p>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">Pulp Fiction</h4>
+            <p class="card-text"><strong>Rating 4.8/5 </strong><i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>Release Date : </em></p>
         </div>
-        <!-- Divider-->
-        <hr class="my-4" />
-        <!-- Post preview-->
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">Failure is not an option</h2>
-                <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our
-                    duty to future generations.</h3>
-            </a>
-            <p class="post-meta">
-                Posted by
-                <a href="#!">Start Bootstrap</a>
-                on July 8, 2022
-            </p>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">Train Spotting</h4>
+            <p class="card-text"><strong>Rating 4.2/5 </strong><i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>Release Date : </em></p>
         </div>
-        <!-- Divider-->
-        <hr class="my-4" />
-        <!-- Pager-->
-        <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older
-                Posts →</a></div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">Knives Out</h4>
+            <p class="card-text"><strong>Rating 4.0/5 </strong><i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>Release Date : </em></p>
+        </div>
     </div>
 </div>
 {% endblock %}

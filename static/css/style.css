@@ -2,6 +2,60 @@
     width: 100%;
 }
 
+/* Card styling - https://www.w3schools.com/howto/howto_css_cards.asp */
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.message-container {
+    background-color:rgb(0,154,73);
+    top: 537px;
+    right: 15px;
+    z-index: 99999999999;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#hide-message {
+    animation: hideAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+}
+
+/* Limit the number of cards to a deck
+https://stackoverflow.com/questions/38895106/how-to-limit-number-of-columns-of-card-deck */
+.card-deck{
+    margin-top: 10px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
+}
+
+.home-card-deck {
+    margin: auto;
+    max-width: 50vw;
+}
+
 /* Animate logo text */
 #animate{
 color: #484848;
