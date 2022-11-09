@@ -20,14 +20,15 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
         rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Light's Out!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Lights Out!</title>
 </head>
 
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="{{ url_for('index') }}">Light's Out!</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Lights Out!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -56,7 +57,7 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
-                        <h1>Light's Out!</h1>
+                        <h1 id="animate"><span>Lights Out!</span></h1>
                         <span class="subheading">A review site for movies and tv shows</span>
                     </div>
                 </div>
@@ -99,7 +100,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="small text-center text-muted fst-italic">Copyright &copy; Light's Out! <span
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Lights Out! <span
                             id="year"></span></div>
                 </div>
             </div>

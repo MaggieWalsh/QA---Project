@@ -1,4 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Movies</h1>
+<div class="row featurette">
+    <div class="col-md-7">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dicta provident, aspernatur mollitia minima
+            perspiciatis officiis accusamus, non, est soluta nam aut. Voluptatum distinctio praesentium cum aspernatur
+            neque sint numquam libero soluta, reprehenderit repellat pariatur temporibus incidunt delectus molestias
+            labore.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" alt="">
+    </div>
+</div>
+<div class="row featurette">
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" alt="">
+    </div>
+    <div class="col-md-7">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dicta provident, aspernatur mollitia minima
+            perspiciatis officiis accusamus, non, est soluta nam aut. Voluptatum distinctio praesentium cum aspernatur
+            neque sint numquam libero soluta, reprehenderit repellat pariatur temporibus incidunt delectus molestias
+            labore.</p>
+    </div>
+</div>
 {% endblock %}
