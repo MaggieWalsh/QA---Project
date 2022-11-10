@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
@@ -8,9 +9,15 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
+
+
 @app.route("/movies")
 def movies():
     return render_template("movies.html")
+
 
 @app.route("/shows")
 def shows():
