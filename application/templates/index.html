@@ -1,45 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="card-deck">
+    {% for movie in movies %}
     <div class="card">
         <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h4 class="card-title">Django Unchained</h4>
-            <p class="card-text"><strong>Rating 4.9/5 </strong><i class="fas fa-star"></i></span></p>
-            <p class="card-text"><em>Release Date : </em></p>
+            <h4 class="card-title">{{ movie.title }}</h4>
+            <p class="card-text">{{ movie.description }} <i class="fas fa-star"></i></span></p>
+            <p class="card-text"><em>{{ movie.genre }}</em></p>
         </div>
     </div>
-    <div class="card">
-        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h4 class="card-title">Casino Royale</h4>
-            <p class="card-text"><strong>Rating 4.4/5 </strong><i class="fas fa-star"></i></span></p>
-            <p class="card-text"><em>Release Date : </em></p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h4 class="card-title">Pulp Fiction</h4>
-            <p class="card-text"><strong>Rating 4.8/5 </strong><i class="fas fa-star"></i></span></p>
-            <p class="card-text"><em>Release Date : </em></p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h4 class="card-title">Train Spotting</h4>
-            <p class="card-text"><strong>Rating 4.2/5 </strong><i class="fas fa-star"></i></span></p>
-            <p class="card-text"><em>Release Date : </em></p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h4 class="card-title">Knives Out</h4>
-            <p class="card-text"><strong>Rating 4.0/5 </strong><i class="fas fa-star"></i></span></p>
-            <p class="card-text"><em>Release Date : </em></p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}

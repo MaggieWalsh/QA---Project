@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Submit Word -->
+<form class="card col-12" method="POST" action="{{url_for('add_movie')}}">
+    <div class="form-group mt-3">
+        <label for="title">Movie Title</label>
+        <input id="title" name="title" type="text" maxlength="50" class="form-control" id="title" placeholder=""
+            required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="description form-control" id="description" name="description" maxlength="200" rows="2"
+            required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre</label>
+        <textarea class="genre form-control" id="genre" name="genre" maxlength="200" rows="2" required></textarea>
+    </div>
+    <div class="text-center mb-3">
+        <button type="submit" id="submit-word" class="text-uppercase btn-dark rounded">Submit Word</button>
+    </div>
+</form>
+{% endblock %}
