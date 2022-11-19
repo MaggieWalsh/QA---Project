@@ -22,6 +22,23 @@ def movie(movie_id):
     return render_template('movie.html', movie=movie)
 
 
+@app.route('/create_movie/', methods=('GET', 'POST'))
+def create_movie():
+    if request.method == 'POST':
+        title = request.form['title']
+        description = request.form['description']
+        genre = request.form['genre']
+        movie = Movie(title=title,
+        description=description,
+        genre=genre,
+        )
+        db.session.add(movie)
+        db.session.commit()
+
+        return redirect(url_for('index'))    
+    return render_template('create_movie.html')
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")

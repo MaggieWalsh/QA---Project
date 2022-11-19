@@ -3,15 +3,14 @@
 <div class="card-deck">
     {% for movie in movies %}
     <div class="card">
-        <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="...">
+        <!-- <img src="{{ url_for('static', filename='assets/img/cinema.jpg') }}" class="card-img-top" alt="..."> -->
         <div class="card-body">
             <p><b>#{{ movie.id }}</b></p>
-            <p class="name">
+            <h4 class="name">
                 <a href="{{ url_for('movie', movie_id=movie.id)}}">
                     {{ movie.title }}
                 </a>
-            </p>
-            <h4 class="card-title">{{ movie.title }}</h4>
+            </h4>
             <p class="card-text">{{ movie.description }} <i class="fas fa-star"></i></span></p>
             <p class="card-text"><em>{{ movie.genre }}</em></p>
         </div>
