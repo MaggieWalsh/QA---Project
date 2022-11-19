@@ -16,6 +16,12 @@ def index():
     return render_template("index.html", movies=movies)
 
 
+@app.route('/<int:movie_id>/')
+def movie(movie_id):
+    movie = Movie.query.get_or_404(movie_id)
+    return render_template('movie.html', movie=movie)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
