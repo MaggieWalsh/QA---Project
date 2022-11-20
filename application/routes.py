@@ -61,6 +61,14 @@ def edit_movie(movie_id):
     return render_template('edit_movie.html', movie=movie)
 
 
+@app.post('/<int:movie_id>/delete_movie/')
+def delete_movie(movie_id):
+    movie = Movie.query.get_or_404(movie_id)
+    db.session.delete(movie)
+    db.session.commit()
+    return redirect(url_for('index'))
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
