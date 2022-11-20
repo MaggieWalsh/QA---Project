@@ -61,6 +61,7 @@ def edit_movie(movie_id):
     return render_template('edit_movie.html', movie=movie)
 
 
+# Add a different way to confirm the user wishes to delete the record
 @app.post('/<int:movie_id>/delete_movie/')
 def delete_movie(movie_id):
     movie = Movie.query.get_or_404(movie_id)
