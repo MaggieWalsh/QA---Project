@@ -39,6 +39,28 @@ def create_movie():
     return render_template('create_movie.html')
 
 
+# Issue with edit function, only pulling the first word from the db
+@app.route('/<int:movie_id>/edit_movie/', methods=('GET', 'POST'))
+def edit_movie(movie_id):
+    movie = Movie.query.get_or_404(movie_id)
+
+    if request.method == 'POST':
+        title = request.form['title']
+        description = request.form['description']
+        genre = request.form['genre']
+
+        movie.title = title
+        movie.description = description
+        movie.genre = genre
+
+        db.session.add(movie)
+        db.session.commit()
+
+        return redirect(url_for('index'))
+
+    return render_template('edit_movie.html', movie=movie)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
