@@ -1,5 +1,6 @@
 from application import app, db
 from flask import render_template, url_for, redirect, request
+from werkzeug.security import generate_password_hash, check_password_hash
 from application.models import Movie
 
 
@@ -73,6 +74,11 @@ def delete_movie(movie_id):
 @app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    return render_template("login.html")
 
 
 @app.route("/movies")
