@@ -51,8 +51,8 @@
                             Account
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('dashboard') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('register') }}">Register</a></li>
                         </ul>
