@@ -43,18 +43,24 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                             href="{{ url_for('index') }}">Movies</a>
                     </li>
+                    {% if current_user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                             href="{{ url_for('create_movie') }}">Add</a></li>
+                    {% endif %}
                     <li class="nav-item dropdown">
                         <a class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" href="#" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Account
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if current_user.is_authenticated %}
                             <li><a class="dropdown-item" href="{{ url_for('dashboard') }}">Profile</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
+                            {% if not current_user.is_authenticated %}
                             <li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('register') }}">Register</a></li>
+                            {% endif %}
                         </ul>
                     </li>
                 </ul>

@@ -18,9 +18,11 @@ def load_user(user_id):
 
 
 class User(db.Model, UserMixin):
+    __tablename__ = 'User'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
+    movie = db.relationship('Movie', backref='userbr')
 
 
 class RegisterForm(FlaskForm):
@@ -53,6 +55,7 @@ class LoginForm(FlaskForm):
 class Movie(db.Model):
     __tablename__ = 'Movie'
     id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column('user_id',db.Integer, db.ForeignKey('User.id'), nullable=False)
     title = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
     genre = db.Column(db.String, nullable=False)

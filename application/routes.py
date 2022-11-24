@@ -118,16 +118,6 @@ def movies():
     return render_template("movies.html")
 
 
-@app.route("/shows")
-def shows():
-    return render_template("shows.html")
-
-
-@app.route("/celebs")
-def celebs():
-    return render_template("celebs.html")
-
-
 @app.route("/account")
 def account():
     return render_template("account.html")
