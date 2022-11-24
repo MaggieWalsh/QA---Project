@@ -12,10 +12,14 @@
                         <form method="POST" action="">
                             {{ form.hidden_tag() }}
                             {{ form.username }}
+                            <br>
+                            <br>
                             {{ form.password }}
+                            <br>
+                            <br>
                             {{ form.submit }}
                         </form>
-
+                        <br>
                         <a href="{{ url_for('register') }}">Don't have an account yet? Sign Up</a>
                     </div>
                 </div>
