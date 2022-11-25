@@ -2,11 +2,6 @@
 {% block content %}
 <h1>{{ current_user.username | title }}'s Profile</h1>
 
-{% for movie in all_movies %}
-{% if movie.username==current_user.username %}
-<!-- Add created by section in function or delete -->
-{% endif %}
-{% endfor %}
 <p>
     <a class="btn btn-light text-uppercase" href="{{url_for('logout')}}">Press here to logout</a>
 </p>
