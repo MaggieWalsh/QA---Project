@@ -17,6 +17,7 @@ This website is a simple movie database where visitors can view, add, edit and d
     * [Font](#font)
     * [ERD](#erd)
     * [Risk Assessment](#risk-assessment)
+    * [Jira](#jira)
     * [Favicon](#favicon)
     * [Typography](#typography)
     * [Layout](#layout)
@@ -79,10 +80,13 @@ This website is a simple movie database where visitors can view, add, edit and d
     * ## Font 
       I came up with the name *Lights Out*, again because it alludes to the purpose of the website a little further. I found a nice animation which is muted until you hover over it. Once you do so the qriting lights up, and when you move your mouse away it darkens again - hence lights out!
     * ## ERD 
-      ![Landing page](application/static/assets/README/erd.png)
-    * ## Risk Assessment
+      ![ERD](application/static/assets/README/erd.png)
 
-      ![Landing page](application/static/assets/README/riskAssessment.png)
+    * ## Risk Assessment
+      ![Risk Assessment](application/static/assets/README/riskAssessment.png)
+
+    * ## Jira
+      ![Jira](application/static/assets/README/jira.png)
       
     * ## Favicon 
       I used the [Favicon.io](https://favicon.io/) website to create a simple video camera favicon, further pointing to the purpose of the website.
